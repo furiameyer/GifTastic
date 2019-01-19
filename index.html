@@ -7,16 +7,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
+    <!-- Icon Library -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- Intro.js CSS for basic introduction and hints -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.css" />
+    
     <title>Create your Gifs</title>
   </head>
   <body>
     
     <div class="container-fluid pt-3 pb-3 bg-light">
-
-        <div class="alert alert-success" role="alert">
-            Click on any of these buttons to display gifs of your favorite animal, or add a new animal to the list
-        </div>
         <div id="buttons-view"></div>
         <hr class="my-4">
         <div class="row">
@@ -30,14 +30,15 @@
                         <label>Add a new animal</label>
                         <input type="text" class="form-control form-control-sm" placeholder="new animal" onfocus="this.value=''" id="animal-input">
                     </div>
-                    <button id="add-animal" type="submit" class="btn btn-secondary btn-sm">Submit</button>
+                    <button id="add-animal" type="submit" class="btn btn-secondary btn-sm" data-intro="Or add a new animal to the list of options!">Submit</button>
                 </form>  
             </div>
         </div>
     </div>
 
-    <!-- jQuery first, then my JS -->
+    <!-- jQuery first, then my JS, then intro.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.js"></script>
     <script src="assets/javascript/app.js"></script>
   </body>
 </html>

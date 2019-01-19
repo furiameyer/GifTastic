@@ -70,8 +70,6 @@ function displayAnimalInfo() {
   // Initiating loop to generate images contained in response object
   for (var i=((displayCount-1)*10); i<displayCount*10; i++) {
 
-    console.log(i);
-
     // Creating a div to contain the gifs and their respective information
     var animalDiv = $('<div class="animal card">');
 
@@ -125,6 +123,9 @@ function renderButtons(animals) {
     a.addClass("btn btn-primary animal-btn mr-1 mb-1");
     a.attr("data-name", animals[i]);
     a.attr("type", "button");
+    if (i===0) {
+      a.attr("data-intro","Push a button like this one to display gifs of your favorite animal");
+    };
     a.text(animals[i]);
     $("#buttons-view").append(a);
   };
@@ -167,5 +168,8 @@ if (!Array.isArray(animals)) {
   animals = ["Lion", "Zebra", "Kangaroo", "Rhino", "Dog", "Cat", "Mouse"];
 }
 
-// render our animal buttons on page load
+// Render our animal buttons on page load
 renderButtons(animals);
+
+// Call this Intro.js function to add onboarding to the page
+introJs().start();
